@@ -166,14 +166,14 @@ export function HeroSection() {
                 aria-label="Buscar imóveis"
               />
             </div>
-            <div className="flex flex-col md:flex-row items-stretch gap-2 w-full sm:w-auto md:w-[340px] md:h-12">
+            <div className="flex flex-row items-stretch gap-2 w-full sm:w-auto md:h-12">
               <Select
                 variant="glass"
                 placeholder="Tipo"
                 options={propertyTypeOptions}
                 value={propertyType}
                 onChange={setPropertyType}
-                className="flex-1 h-12 md:h-full"
+                className="flex-1 h-12 md:h-full min-w-0 md:w-[170px]"
               />
               <Select
                 variant="glass"
@@ -181,17 +181,17 @@ export function HeroSection() {
                 options={priceRangeOptions}
                 value={priceRange}
                 onChange={setPriceRange}
-                className="flex-1 h-12 md:h-full"
+                className="flex-1 h-12 md:h-full min-w-0 md:w-[170px]"
               />
+              <button
+                type="submit"
+                className="flex items-center justify-center gap-2 h-12 w-12 px-0 sm:w-auto sm:px-8 rounded-xl bg-[var(--color-accent)] text-white font-sans text-sm font-semibold hover:bg-[var(--color-accent-dark)] transition-colors duration-300 cursor-pointer shrink-0"
+                aria-label="Buscar imóveis"
+              >
+                <span className="hidden sm:inline">Buscar</span>
+                <Search className="w-5 h-5 sm:hidden" />
+              </button>
             </div>
-            <button
-              type="submit"
-              className="flex items-center justify-center gap-2 h-12 px-8 w-full sm:w-auto rounded-xl bg-[var(--color-accent)] text-white font-sans text-sm font-semibold hover:bg-[var(--color-accent-dark)] transition-colors duration-300 cursor-pointer shrink-0"
-              aria-label="Buscar imóveis"
-            >
-              <span className="hidden sm:inline">Buscar</span>
-              <Search className="w-4 h-4 sm:hidden" />
-            </button>
           </form>
         </motion.div>
       </motion.div>
